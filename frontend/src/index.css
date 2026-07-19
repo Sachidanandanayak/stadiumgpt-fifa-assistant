@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+
+body {
+  @apply bg-white text-slate-900 dark:bg-fifa-navy dark:text-slate-100 font-body transition-colors duration-300;
+}
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(212,175,55,0.5); border-radius: 8px; }
+
+.glass {
+  @apply bg-white/10 dark:bg-white/5 backdrop-blur-xl border border-white/20 dark:border-white/10 shadow-xl;
+}
+
+.glass-strong {
+  @apply bg-white/70 dark:bg-slate-900/60 backdrop-blur-2xl border border-white/30 dark:border-white/10 shadow-2xl;
+}
+
+.text-gradient-gold {
+  @apply bg-gradient-to-r from-fifa-gold via-yellow-300 to-fifa-gold bg-clip-text text-transparent;
+}
+
+.btn-primary {
+  @apply px-6 py-3 rounded-full font-semibold bg-fifa-gold text-fifa-navy hover:brightness-110 active:scale-95 transition-all shadow-lg shadow-fifa-gold/30;
+}
+
+.btn-secondary {
+  @apply px-6 py-3 rounded-full font-semibold glass text-white hover:bg-white/20 active:scale-95 transition-all;
+}
+
+.skeleton {
+  @apply animate-pulse bg-slate-300/40 dark:bg-slate-700/40 rounded-lg;
+}
